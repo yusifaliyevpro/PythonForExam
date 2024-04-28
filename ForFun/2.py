@@ -1,4 +1,4 @@
-# Natural ədədlərin kvadratları olan ədədləri çap edən proqram
+# Natural ədədlərin kvadratları olan ədədləri çap edən proqram.
 a = [3, 4, 15, 9, 18, 16]
 
 for i in a:
