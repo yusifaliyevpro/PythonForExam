@@ -1,8 +1,8 @@
 import os
 
-path = "Ev tapşırıqları/06.05.2024"
+path = ""
 
-for i in range(100, 117):
+for i in range(84, 104):
     a = open(os.path.join(path, f"{i}.py"), 'x')
     a.close()
 
