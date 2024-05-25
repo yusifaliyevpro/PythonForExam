@@ -1,6 +1,6 @@
 # n-ci fibonacci ədədinə qədər (n daxil) olan ədədlərin cəmini hesablayan proqram
 def fibonacci(n):
-    if n in {0, 1}:
+    if n in [0, 1]:
         return n
     return fibonacci(n - 1) + fibonacci(n - 2)
 
