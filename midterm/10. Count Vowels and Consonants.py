@@ -1,7 +1,7 @@
 # 10. Count Vowels and Consonants
 
 a = input("Enter the text: ")
-vowelsList = ["a", "i", "o", "u", "e"]
+vowelsList = "aioueAIOUE"
 vow = 0
 con = 0
 
