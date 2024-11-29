@@ -37,9 +37,10 @@ tasks = [
 
 
 for i in range(1, len(tasks) + 1):
-    a = open(os.path.join(path, f"{i}.py"), "w", encoding="utf-8")
-    a.write(f"# {i}. {tasks[i-1]}")
-    a.close()
+    os.rename(
+        os.path.join(path, f"{i} {tasks[i-1]}.py"),
+        os.path.join(path, f"{i}. {tasks[i-1]}.py"),
+    )
 
 # for i in range(1, 26):
 #     os.remove(os.path.join(path, f"{i}.py"))
