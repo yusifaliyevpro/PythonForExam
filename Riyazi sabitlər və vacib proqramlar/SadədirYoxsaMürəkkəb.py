@@ -1,12 +1,14 @@
-# Daxil edilən ədədin sadə yoxsa mürəkkəb ədəd olmasını yoxlayan proqram
-n = int(input("Bir ədəd daxil edin: "))
-s = 0
+a = int(input("Ədəd daxil edin: "))
+b = int(input("Ədəd daxil edin: "))
 
-for i in range(2, n):
-    if int(n/i) == n/i:
-        s += 1
 
-if s > 1:
-    print("Mürəkkəb ədəddir")
-else:
-    print("Sadə ədəddir")
+def IsSadə(n):
+    s = 0
+    for i in range(2, n):
+        if n % i == 0:
+            return True
+
+
+for i in range(a, b + 1):
+    if IsSadə(i):
+        print(i)
