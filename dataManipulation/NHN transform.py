@@ -18,15 +18,33 @@ def transform_package(data):
             for question in questions:
                 # İlgili alanları seç
                 question_data = {
-                    "comment": question.get("comment"),
-                    "considered": question.get("considered"),
+                    "comment": (
+                        question.get("comment")
+                        # .replace("\r", "\n").replace("\t", "\n")
+                        if question.get("comment") != None
+                        else question.get("comment")
+                    ),
+                    "considered": (
+                        question.get("considered")
+                        # .replace("\r", "\n")
+                        # .replace("\t", "\n")
+                        if question.get("considered") != None
+                        else question.get("considered")
+                    ),
+                    "authors": [
+                        author.get("fullname") for author in question.get("authors", [])
+                    ],
                 }
                 # Values içindeki ilk öğeden text, answer ve rekvizit alınır
                 first_value = question.get("values", [{}])[0]
                 question_data.update(
                     {
                         "question": first_value.get("text"),
+                        # .replace("\r", "\n")
+                        # .replace("\t", "\n"),
                         "answer": first_value.get("answer"),
+                        # .replace("\r", "\n")
+                        # .replace("\t", "\n"),
                         "rekvizit": first_value.get("rekvizit"),
                     }
                 )
