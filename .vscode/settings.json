@@ -2,5 +2,5 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
-  "workbench.colorTheme": "Default Dark Modern"
+  "workbench.colorTheme": "Dark Modern"
 }
